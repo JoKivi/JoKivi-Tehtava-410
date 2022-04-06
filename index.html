@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Kaverilista</title>
+</head>
+<body>
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>Kaverilista</h1>
+    </div>
+    <br>
+    <section class="container">
+        <div class="col-sm-3">
+            <form name="nimenSyotto" id="form">
+                <h3>Syötä nimi</h3>
+                <div class="virhe" id="virhe"></div>
+
+                <div>
+                    <label for="nimi">Koko nimi</label><br>
+                    <input type="text" id="nimi" name="nimi"><br><br>
+                </div>
+                
+                <button class="button" id="button">TALLENNA</button>
+            </form>
+        </div>
+    </section>
+
+    <br>
+    <hr>
+    <ol id="nimet"></ol>
+
+
+<script src="main.js"></script>
+</body>
+</html>
