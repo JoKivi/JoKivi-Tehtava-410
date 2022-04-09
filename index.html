@@ -10,30 +10,35 @@
     <title>Kaverilista</title>
 </head>
 <body>
-    <div class="container-fluid p-5 bg-primary text-white text-center">
-        <h1>Kaverilista</h1>
-    </div>
-    <br>
-    <section class="container">
-        <div class="col-sm-3">
-            <form name="nimenSyotto" id="form">
-                <h3>Syötä nimi</h3>
+
+    <header>
+        <div class="container">
+            <h1>Kaverilista</h1>
+        </div>
+    </header>
+
+
+    <section id="form">
+        <div class="container">
+            <form>
+                <h3>Syötä 10 kaverin nimi</h3>
                 <div class="virhe" id="virhe"></div>
 
-                <div>
-                    <label for="nimi">Koko nimi</label><br>
-                    <input type="text" id="nimi" name="nimi"><br><br>
+                <div id="nimi">
+                    <input type="text" placeholder="Syötä nimi..." name="nimi">
+                    <button class="button" id="button">TALLENNA</button>
                 </div>
                 
-                <button class="button" id="button">TALLENNA</button>
             </form>
         </div>
     </section>
 
-    <br>
     <hr>
-    <ol id="nimet"></ol>
 
+    <section id="tulostusalue">
+    <ol id="nimet"></ol>
+    </section>
+    
 
 <script src="main.js"></script>
 </body>
