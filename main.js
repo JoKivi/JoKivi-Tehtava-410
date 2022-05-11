@@ -3,6 +3,7 @@ const virhe = document.querySelector(".virhe");
 const listanTulostus = document.querySelector("#nimet");
 const lista = [];
 let laskuri =0;
+const limit = 10;
 
 document.getElementById("form").addEventListener("submit", listalleArray);
 
@@ -18,18 +19,18 @@ function listalleArray(event) {
 
     } else {
         lista[laskuri++] = syotettyNimi.value;
-        rebuildList();
+        if (laskuri >= limit) {
+            listaus();
+        }
     }
 }
 
-function rebuildList() {
+function listaus() {
     listanTulostus.innerHTML = "";
     lista.forEach(n => { 
         let li = document.createElement("li");
         li.innerHTML = n;
-        if (laskuri == 10) {
-            listanTulostus.appendChild(li);
-        }
+        listanTulostus.appendChild(li);
     });
 
 }
